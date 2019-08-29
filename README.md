@@ -27,5 +27,20 @@
   * Form: Enter ASIN for lookup, submit button 
   * Returned input: render 
 
-# Documenting difficulties:
+## Documenting difficulties:
 * Navigating Amazon ecommerce ecosystem to figure out which API to call for retrieving product info with
+  * Realizing that we have to visit actual product page and fetch elements
+* Finding the right DOM elements were annoying -- it may not even work, lets find out
+
+## Getting info from DOM elements: 
+
+### Rank
+* inside div with ID productDetails_db_sections
+  * in tbody, <tr> where there is a <th> with the inner text Best Sellers Rank, get the inner text of all the children of its subsequent <td><span></span></td>
+
+### Category
+* String inside previous inner text found
+
+### Dimensions
+* inside <table> with id productDetails_techSpec_section_2
+  * in <tbody>, then <tr> with nested <th> with inner text Product Dimensions, the inner text of its subsequent <td>
