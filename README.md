@@ -44,3 +44,7 @@
 ### Dimensions
 * inside <table> with id productDetails_techSpec_section_2
   * in <tbody>, then <tr> with nested <th> with inner text Product Dimensions, the inner text of its subsequent <td>
+
+## Evaluating tools for scraping 
+* Puppeteer - headless chromium
+* Cheerio - seems too heavy weight
