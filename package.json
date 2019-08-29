@@ -1,0 +1,23 @@
+{
+  "name": "amazon_lookup",
+  "version": "1.0.0",
+  "description": "Look up Amazon product information by ASIN",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "dotenv": "^8.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nombiezinja/amazon_lookup.git"
+  },
+  "author": "Ti Zhang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nombiezinja/amazon_lookup/issues"
+  },
+  "homepage": "https://github.com/nombiezinja/amazon_lookup#readme"
+}
