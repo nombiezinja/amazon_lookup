@@ -1,0 +1,19 @@
+.table-striped>tbody>tr:nth-child(odd)>td,
+.table-striped>tbody>tr:nth-child(odd)>th {
+  background-color: #add8e6;
+}
+
+th,
+td,
+p {
+  text-align: left;
+  padding: 0.5em;
+}
+
+.form-control {
+  margin: 0.5em;
+}
+
+h1{
+  margin: 1em;
+}

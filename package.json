@@ -4,8 +4,15 @@
   "description": "Look up Amazon product information by ASIN",
   "main": "index.js",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "casper": "^0.1.1",
     "ejs": "^2.6.2",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "knex": "^0.19.3",
+    "node-fetch": "^2.6.0",
+    "pg": "^7.12.1",
+    "puppeteer": "^1.19.0",
+    "random-useragent": "^0.3.1"
   },
   "devDependencies": {
     "dotenv": "^8.1.0"

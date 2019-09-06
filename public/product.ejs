@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Amazon Product Lookup
+  </title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+</head>
+
+<body>
+  <div class="container text-center content">
+    <h1><a href="/">Amazon Product Lookup</a></h1>
+    <div class="row">
+      <div class="col-lg-4">
+      </div>
+      <div class="col-lg-4 jumbotron">
+        <table class="table-striped padding-md margin-xl">
+          <tr>
+            <th>ASIN</th>
+            <td><%= asin %></td>
+          </tr>
+          <tr>
+            <th>Category</th>
+            <td><%= category %></td>
+          </tr>
+          <tr>
+            <th>Dimensions</th>
+            <td><%= dimensions %></td>
+          </tr>
+          <tr>
+            <th>Rank</th>
+            <td><%= rank %></td>
+          </tr>
+          <tr>
+            <th>Product page</th>
+            <td><a href="https://www.amazon.com/gp/product/<%= asin %>"> Link</a></td>
+          </tr>
+        </table>
+        <p><a href="/">Search again</a></p>
+      </div>
+      <div class="col-lg-4">
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
