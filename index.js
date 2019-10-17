@@ -39,7 +39,47 @@ app.use((req,res,next) =>{
   next();
 }); 
 
-app.post('/', async (req, res, next) => {
+app.post('/search_by_keyword', async(req, res, next) => {
+  const keyword = req.body.keyword;
+  let asins = [];
+  //look for it in db
+  // if in db, asins = db query results
+  // if not in db, scrabe
+  const browser = await puppeteer.launch();
+  const page = await browser.newPage();
+  await page.setUserAgent(randomUseragent.getRandom())
+
+  try {
+    const response = await page.goto(``, {
+      waitUntil: 'networkidle0'
+    });
+    const statusCode = response.headers().status
+
+    if (statusCode !== '200') {
+      next(new Error(errors[statusCode]));
+    }  
+  } catch (e) {
+    next(e);
+  }
+
+  // await page.waitFor(2000);
+
+  let results = await page.evaluate(async () => {
+    try {
+      return {}
+    } catch (e) {
+      console.error(JSON.stringify(e));
+      return {
+      };
+    }
+  });
+
+  const title = await page.title();
+
+  res.json()
+})
+
+app.post('/search_by_asin', async (req, res, next) => {
 
   const asin = req.body.asin;
   let retrieved;
@@ -123,6 +163,8 @@ app.use((err, req, res, next) => {
   console.error(err.stack);
   return res.render('error', {msg: err.message});
 });
+
+
 
 const errors = {
   404: 'No product exists with this ASIN', 
